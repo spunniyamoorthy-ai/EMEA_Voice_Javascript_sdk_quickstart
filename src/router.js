@@ -9,7 +9,7 @@ router.get("/token", (req, res) => {
 
 router.post("/voice", (req, res) => {
   res.set("Content-Type", "text/xml");
-  res.send(voiceResponse(req.body));
+  res.send(voiceResponse(req.body).toString());
 });
 
 module.exports = router;
